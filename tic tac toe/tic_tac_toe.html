@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>TIC-TAC-TOE</title>
+<script>
+	var p1=[];
+	var p2=[];
+	var s1=[];
+	var f=0;
+	var x="X";
+	var y="O";
+	var z="PLAYER 1 WON THE GAME";
+	var l="PLAYER 2 WON THE GAME";
+	var s="PLAYER 1 TURNS";
+	var t="PLAYER 2 TURNS";
+	var w="MATCH DRAW";
+	var c=0;
+	var d=0
+	function game(n,id)
+	{
+		if(f==0&&s1[n]!=n)
+		{
+			p1[n]=n;
+			document.getElementById('t5').innerHTML=t;
+			f=1;
+			if((p1[1]!=1||p1[2]!=2||p1[3]!=3)&&(p1[4]!=4||p1[5]!=5||p1[6]!=6)&&(p1[7]!=7||p1[8]!=8||p1[9]!=9)&&(p1[1]!=1||p1[4]!=4||p1[7]!=7)&&(p1[5]!=5||p1[2]!=2||p1[8]!=8)&&(p1[9]!=9||p1[6]!=6||p1[3]!=3)&&(p1[1]!=1||p1[5]!=5||p1[9]!=9)&&(p1[7]!=7||p1[5]!=5||p1[3]!=3)&&(p2[1]!=1||p2[2]!=2||p2[3]!=3)&&(p2[4]!=4||p2[5]!=5||p2[6]!=6)&&(p2[7]!=7||p2[8]!=8||p2[9]!=9)&&(p2[1]!=1||p2[4]!=4||p2[7]!=7)&&(p2[5]!=5||p2[2]!=2||p2[8]!=8)&&(p2[9]!=9||p2[6]!=6||p2[3]!=3)&&(p2[1]!=1||p2[5]!=5||p2[9]!=9)&&(p2[7]!=7||p2[5]!=5||p2[3]!=3))
+			document.getElementById(id).innerHTML=x;
+			s1[n]=n;
+			if(p1[1]==1&&p1[2]==2&&p1[3]==3||p1[4]==4&&p1[5]==5&&p1[6]==6||p1[7]==7&&p1[8]==8&&p1[9]==9||p1[1]==1&&p1[4]==4&&p1[7]==7||p1[5]==5&&p1[2]==2&&p1[8]==8||p1[9]==9&&p1[6]==6&&p1[3]==3||p1[1]==1&&p1[5]==5&&p1[9]==9||p1[7]==7&&p1[5]==5&&p1[3]==3)
+			{
+				document.getElementById('t5').innerHTML=z;
+				if(d==0)
+				{	
+					document.getElementById(id).innerHTML=x;
+					d+=1
+				}
+			}
+			c+=1;
+			if((c==9)&&(p1[1]!=1||p1[2]!=2||p1[3]!=3)&&(p1[4]!=4||p1[5]!=5||p1[6]!=6)&&(p1[7]!=7||p1[8]!=8||p1[9]!=9)&&(p1[1]!=1||p1[4]!=4||p1[7]!=7)&&(p1[5]!=5||p1[2]!=2||p1[8]!=8)&&(p1[9]!=9||p1[6]!=6||p1[3]!=3)&&(p1[1]!=1||p1[5]!=5||p1[9]!=9)&&(p1[7]!=7||p1[5]!=5||p1[3]!=3)&&(p2[1]!=1||p2[2]!=2||p2[3]!=3)&&(p2[4]!=4||p2[5]!=5||p2[6]!=6)&&(p2[7]!=7||p2[8]!=8||p2[9]!=9)&&(p2[1]!=1||p2[4]!=4||p2[7]!=7)&&(p2[5]!=5||p2[2]!=2||p2[8]!=8)&&(p2[9]!=9||p2[6]!=6||p2[3]!=3)&&(p2[1]!=1||p2[5]!=5||p2[9]!=9)&&(p2[7]!=7||p2[5]!=5||p2[3]!=3))
+			document.getElementById('t5').innerHTML=w;
+			
+		}
+		else if(f==1&&s1[n]!=n)
+		{
+			p2[n]=n;
+			document.getElementById('t5').innerHTML=s;
+			f=0;
+			if((p1[1]!=1||p1[2]!=2||p1[3]!=3)&&(p1[4]!=4||p1[5]!=5||p1[6]!=6)&&(p1[7]!=7||p1[8]!=8||p1[9]!=9)&&(p1[1]!=1||p1[4]!=4||p1[7]!=7)&&(p1[5]!=5||p1[2]!=2||p1[8]!=8)&&(p1[9]!=9||p1[6]!=6||p1[3]!=3)&&(p1[1]!=1||p1[5]!=5||p1[9]!=9)&&(p1[7]!=7||p1[5]!=5||p1[3]!=3)&&(p2[1]!=1||p2[2]!=2||p2[3]!=3)&&(p2[4]!=4||p2[5]!=5||p2[6]!=6)&&(p2[7]!=7||p2[8]!=8||p2[9]!=9)&&(p2[1]!=1||p2[4]!=4||p2[7]!=7)&&(p2[5]!=5||p2[2]!=2||p2[8]!=8)&&(p2[9]!=9||p2[6]!=6||p2[3]!=3)&&(p2[1]!=1||p2[5]!=5||p2[9]!=9)&&(p2[7]!=7||p2[5]!=5||p2[3]!=3))
+			document.getElementById(id).innerHTML=y;
+			s1[n]=n;
+			if(p2[1]==1&&p2[2]==2&&p2[3]==3||p2[4]==4&&p2[5]==5&&p2[6]==6||p2[7]==7&&p2[8]==8&&p2[9]==9||p2[1]==1&&p2[4]==4&&p2[7]==7||p2[5]==5&&p2[2]==2&&p2[8]==8||p2[9]==9&&p2[6]==6&&p2[3]==3||p2[1]==1&&p2[5]==5&&p2[9]==9||p2[7]==7&&p2[5]==5&&p2[3]==3)
+			{
+				document.getElementById('t5').innerHTML=l;
+				if(d==0)
+				{
+					document.getElementById(id).innerHTML=y;
+					d+=1
+				}
+			}
+			c+=1;
+			if((c==9)&&(p1[1]!=1||p1[2]!=2||p1[3]!=3)&&(p1[4]!=4||p1[5]!=5||p1[6]!=6)&&(p1[7]!=7||p1[8]!=8||p1[9]!=9)&&(p1[1]!=1||p1[4]!=4||p1[7]!=7)&&(p1[5]!=5||p1[2]!=2||p1[8]!=8)&&(p1[9]!=9||p1[6]!=6||p1[3]!=3)&&(p1[1]!=1||p1[5]!=5||p1[9]!=9)&&(p1[7]!=7||p1[5]!=5||p1[3]!=3)&&(p2[1]!=1||p2[2]!=2||p2[3]!=3)&&(p2[4]!=4||p2[5]!=5||p2[6]!=6)&&(p2[7]!=7||p2[8]!=8||p2[9]!=9)&&(p2[1]!=1||p2[4]!=4||p2[7]!=7)&&(p2[5]!=5||p2[2]!=2||p2[8]!=8)&&(p2[9]!=9||p2[6]!=6||p2[3]!=3)&&(p2[1]!=1||p2[5]!=5||p2[9]!=9)&&(p2[7]!=7||p2[5]!=5||p2[3]!=3))
+			document.getElementById('t5').innerHTML=w;
+		}
+	}
+</script>
+</head>
+<body>
+<form name="f1" id="f1" method="post" action="#">
+<table border="10" bordercolor="rgb(0,0,64)" align="center" cellspacing="1" cellpadding="10" width="50%" height="90%">
+<tr>
+	<td colspan="3" align="center" bgcolor="blue"><h1>TIC_TAC_TOE</h1></td>
+</tr>
+<tr>
+	<td onclick="game('1','a1')" align="center" id="a1" bgcolor="aqua"><b>1</b></td>
+	<td onclick="game('2','a2')" align="center" id="a2" bgcolor="aqua"><b>2</b></td>
+	<td onclick="game('3','a3')" align="center" id="a3" bgcolor="aqua"><b>3</b></td>
+</tr>
+<tr>
+	<td onclick="game('4','a4')" align="center" id="a4" bgcolor="aqua"><b>4</b></td>
+	<td onclick="game('5','a5')" align="center" id="a5" bgcolor="aqua"><b>5</b></td>
+	<td onclick="game('6','a6')" align="center" id="a6" bgcolor="aqua"><b>6</b></td>
+</tr>
+<tr>
+	<td onclick="game('7','a7')" align="center" id="a7" bgcolor="aqua"><b>7</b></td>
+	<td onclick="game('8','a8')" align="center" id="a8" bgcolor="aqua"><b>8</b></td>
+	<td onclick="game('9','a9')" align="center" id="a9" bgcolor="aqua"><b>9</b></td>
+</tr>
+<tr bgcolor="brown">
+	<td colspan="3" align="center"><span id="t5">PLAYER 1 TURNS</span></td>
+</tr>
+<tr bgcolor="brown">
+	<td colspan="3" align="center"><span id="t6"><input type=submit value="restart"></span></td>
+</tr>
+</form>
+</body>
+</html>
